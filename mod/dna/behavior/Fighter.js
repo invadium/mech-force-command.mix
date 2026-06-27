@@ -7,10 +7,10 @@ function nope(mech) {
 function moveTowards(mech, target) {
     if (!target) return
 
-    if (mech.y < target.y) mech.move.dir(_.DOWN)
-    else if (mech.y > target.y) mech.move.dir(_.UP)
-    else if (mech.x < target.x) mech.move.dir(_.RIGHT)
-    else if (mech.x > target.x) mech.move.dir(_.LEFT)
+    if (mech.y < target.y) mech.move.direction(_.DOWN)
+    else if (mech.y > target.y) mech.move.direction(_.UP)
+    else if (mech.x < target.x) mech.move.direction(_.RIGHT)
+    else if (mech.x > target.x) mech.move.direction(_.LEFT)
 }
 
 function ram(mech) {
@@ -77,7 +77,7 @@ function searchAndDestroy(mech) {
     }
 
     if (mech.action <= 3) {
-        mech.move.dir(RND(3))
+        mech.move.direction(RND(3))
         mech.status = 'walking around'
 
     } else if (mech.action === 4) {
@@ -89,9 +89,9 @@ function searchAndDestroy(mech) {
 
 function holdTheGround(mech) {
     if (mech.steps > 0) {
-        // move in random dir for the starters
+        // move in random direction for the starters
         mech.steps --
-        mech.move.dir(RND(3))
+        mech.move.direction(RND(3))
         mech.status = 'taking a holding position'
     } else {
         fire(mech)
@@ -163,7 +163,7 @@ function follow(mech, patrol) {
 
     if (nextStep >= 0) {
         // move along existing path
-        const moved = mech.move.dir(nextStep)
+        const moved = mech.move.direction(nextStep)
         if (!moved) {
             if (!mech.cache.retry) {
                 mech.cache.retry = true

@@ -2,10 +2,10 @@ function setup() {
     augment(pal, env.palette)
 
     // pack scenarios
-    _.sce.land = lib.util.packArray(_.sce.land)
-    _.sce.story = lib.util.packArray(_.sce.story)
-    _.sce.land.forEach((land, i) => {
-        land.story = _.sce.story[i]
+    __$.sce.land = lib.util.packArray(__$.sce.land)
+    __$.sce.story = lib.util.packArray(__$.sce.story)
+    __$.sce.land.forEach((land, i) => {
+        land.story = __$.sce.story[i]
     })
 
 

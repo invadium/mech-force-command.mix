@@ -13,7 +13,7 @@ class RandomStriker extends dna.behavior.Behavior {
         }
 
         if (this.action <= 3) {
-            this.move.dir(RND(3))
+            this.move.direction(RND(3))
             this.status = 'walking around'
 
         } else if (this.action === 4) {

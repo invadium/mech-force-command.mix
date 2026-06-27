@@ -337,10 +337,10 @@ class ViewPort {
 
     act(action, repeat, pressTime) {
         //log(`[${this.name}] #${action}`)
-        if (action === _.NEXT) {
+        if (action === __$.NEXT) {
             this.jump(1, !this.target.taken)
             return
-        } else if (action === _.PREV) {
+        } else if (action === __$.PREV) {
             if (this.target.taken) {
                 this.releaseControl()
                 lib.sfx('auto')
@@ -350,7 +350,7 @@ class ViewPort {
                 lib.sfx('free')
             }
             return
-        } else if (action === _.OPT) {
+        } else if (action === __$.OPT) {
             this.openMenu()
             return
         }
@@ -399,7 +399,7 @@ class ViewPort {
 
     /*
     deactivate(action, pressTime) {
-        if (action === _.PREV && pressTime > env.tune.portReleaseDelay) {
+        if (action === __$.PREV && pressTime > env.tune.portReleaseDelay) {
             this.releaseFocus()
         }
     }

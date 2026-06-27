@@ -16,7 +16,7 @@ function act(action) {
     if (mech.dead) return
 
     if (action < 4) {
-        mech.move.dir(action)
+        mech.move.direction(action)
         //lib.sfx('step')
 
         /*

@@ -2,9 +2,9 @@ const name = 'move'
 
 function onInstall() {}
 
-function dir(direction) {
+function direction(idir) {
     let move = false
-    switch(direction) {
+    switch(idir) {
         case 0: move = this.up();    break;
         case 1: move = this.left();  break;
         case 2: move = this.down();  break;

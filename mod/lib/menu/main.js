@@ -3,13 +3,13 @@ const main = {
         {
             name: env.msg.newGame,
             action: function(menu) {
-                menu.selectMore(lib.menu.listScenarios( _.sce.land, true ))
+                menu.selectMore(lib.menu.listScenarios( __$.sce.land, true ))
                 /*
                 const map = menu.items[1].map
                 trap('showScenario', {
                     map: map,
-                    land:  _.sce.land[map],
-                    story: _.sce.story[map],
+                    land:  __$.sce.land[map],
+                    story: __$.sce.story[map],
                 })
                 */
             }
@@ -21,7 +21,7 @@ const main = {
             },
             define: function(menu) {
                 this.map = 1
-                this.options = _.sce.land
+                this.options = __$.sce.land
                 this.sync()
             },
             actionNext: function() {

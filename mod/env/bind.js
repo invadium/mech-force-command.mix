@@ -47,20 +47,20 @@ function indexKeys() {
 function actionName(action) {
     let n = 'unknown'
     switch(action) {
-        case _.NONE:  n = 'none'; break;
-        case _.UP:    n = 'up';   break;
-        case _.LEFT:  n = 'left'; break; 
-        case _.DOWN:  n = 'down'; break; 
-        case _.RIGHT: n = 'right'; break; 
-        case _.NEXT:  n = 'next'; break; 
-        case _.PREV:  n = 'prev'; break; 
-        case _.USE:   n = 'use';  break; 
-        case _.OPT:   n = 'opt';  break; 
+        case __$.NONE:  n = 'none'; break;
+        case __$.UP:    n = 'up';   break;
+        case __$.LEFT:  n = 'left'; break; 
+        case __$.DOWN:  n = 'down'; break; 
+        case __$.RIGHT: n = 'right'; break; 
+        case __$.NEXT:  n = 'next'; break; 
+        case __$.PREV:  n = 'prev'; break; 
+        case __$.USE:   n = 'use';  break; 
+        case __$.OPT:   n = 'opt';  break; 
     }
     return n
 }
 
 function init() {
     indexKeys()
-    augment(_, actions)
+    augment(__$, actions)
 }

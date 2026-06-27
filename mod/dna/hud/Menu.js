@@ -31,12 +31,12 @@ class Menu extends dna.hud.Panel {
 
     activate(action) {
         switch(action) {
-            case _.UP:    this.selectPrev(); break;
-            case _.DOWN:  this.selectNext(); break;
-            case _.LEFT:  this.actionPrev(); break;
-            case _.RIGHT: this.actionNext(); break;
-            case _.USE:   this.action(); break;
-            case _.OPT:   if (this.onOpt) this.onOpt(); break;
+            case __$.UP:    this.selectPrev(); break;
+            case __$.DOWN:  this.selectNext(); break;
+            case __$.LEFT:  this.actionPrev(); break;
+            case __$.RIGHT: this.actionNext(); break;
+            case __$.USE:   this.action(); break;
+            case __$.OPT:   if (this.onOpt) this.onOpt(); break;
         }
     }
 

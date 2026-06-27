@@ -4,7 +4,7 @@
 
 // TODO include basic colors and extend main palette
 //      can be extended with other palettes
-const dir = {
+const direct = {
     base: hsl(.45, .1, .1),
     baseHi: hsl(.45, .2, .2),
     baseLow: hsl(.45, .15, .15),
@@ -66,8 +66,8 @@ function cidx(color) {
 }
 
 function init() {
-    Object.keys(dir).forEach(k => {
-        const v = dir[k]
+    Object.keys(direct).forEach(k => {
+        const v = direct[k]
         ls.push(v)
         index[k] = ls.length - 1
     })
@@ -79,9 +79,18 @@ function init() {
         ls.push(color) // include in palette
         const icolor = ls.length - 1
         t.color = icolor
-        dir[t.name + 'Team'] = color
+        direct[t.name + 'Team'] = color
         index[colorName] = icolor
     })
 
     lib.cidx = cidx
+}
+
+module.exports = {
+    init,
+    ls,
+    dir: direct,
+    cidx,
+    team,
+    index,
 }

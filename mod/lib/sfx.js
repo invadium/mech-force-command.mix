@@ -20,7 +20,7 @@ function soundFx(name, vol, pan) {
     }
 
     //log(`plaing [${name}]`)
-    sfx(clip, vol, pan)
+    sys.sfx(clip, vol, pan)
 }
 
 soundFx.at = function(name, x, y) {

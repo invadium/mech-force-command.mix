@@ -20,7 +20,7 @@ class Behavior {
     }
 
     randomStep() {
-        this.__.move.dir(RND(3))
+        this.__.move.direction(RND(3))
         this.__.status = 'walking around'
     }
 
